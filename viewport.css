@@ -1,0 +1,28 @@
+@media (min-width: 640px) {
+    .shape,
+    .lineup li,
+    .date {
+         opacity: 0;
+         transition: opacity 1s ease-in;
+    }
+
+    .in-viewport .shape,
+    .in-viewport .lineup li,
+    .in-viewport .date{
+        opacity: 1;
+    }
+
+    
+}
+
+@media (max-width: 780px) {
+    .register .container {
+        flex-direction: column;
+    }
+    .register h2 {
+        font-size: 30px;
+    }
+    .form {
+        margin: 24px 0px;
+    }
+}

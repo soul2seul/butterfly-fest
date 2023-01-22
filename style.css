@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+
+body {
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 100%;
+    overflow-x: hidden;
+    
+    
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+
+/* This class adds padding to our section and can be reused*/
+
+.section-pad {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.container {
+    max-width: 810px;
+    margin: auto;
+}
+
+.intro {
+    background-image: url(/images/aura.jpeg);
+}
+
+.bg-cover {
+    background-size: cover;
+    background-position: cover;
+    background-repeat: no-repeat;
+}
+
+.intro p {
+    font-size: 30px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 112px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo img{
+    width: 100%;
+}
+
+@keyframes fadeIn {
+     0% {
+        opacity: 0;
+        transform: translateY(20px);
+     }
+
+     50% {
+        transform: translate(0);
+
+     }
+
+     100% { 
+        opacity: 1;
+
+     }
+}
+
+.appear {
+opacity: 0;
+animation-name: fadeIn;
+animation-duration: 3s;
+animation-delay: 2s;
+/*Helps the animation to not go back to the first frame (opacity 0)*/
+animation-fill-mode: forwards;
+
+}
+
+
+.marquee {
+    position: absolute;
+    top: 3vh;
+    left: 0;
+    width: 100%;
+    font-size: 5vw;
+    color: white;
+    line-height: 1;
+    /*This will stop horizontal scrollbars*/
+    overflow: hidden;
+    /* allows styling of the marquee text */
+    mix-blend-mode: difference;
+}
+
+@keyframes moveleft {
+    0%{
+       transform: translateX(0);
+    }
+
+    100%{ transform: translateX(-3000vw);
+
+    }
+}
+
+.marquee span {
+    /* css animation rule*/
+    animation: moveleft 200s infinite;
+    animation-timing-function: linear;
+    /* This ensures the text stays all in the same line*/
+    white-space: nowrap;
+    /* Our span is set to be inline by default, so here we tell it to be block*/
+    display: block;
+    /* This will let us add our animation */
+    position: relative;
+}
+
+.day-1 { 
+    background-color: #9dd8f6;
+    text-align: center;
+
+}
+
+.day-2 {
+    background-color: #4bd48b;
+    text-align: center;
+}
+
+.day-3 {
+    background-image: url(images/doubleaura.jpeg);
+    text-align: center;
+}
+
+.day {
+    text-align: center;
+    position: relative;
+}
+
+.date {
+    font-size: 28px;
+    color: #FFEECF;
+    margin-bottom: 48px;
+    line-height: 1;
+    overflow: hidden;
+    text-align: center;
+    transform: translateX(20px);
+}
+
+.lineup h2 {
+font-size: 56px;
+line-height: 1;
+margin-bottom: 6px;
+color: rgba(255, 244, 244, 0.847)
+
+}
+
+.lineup p {
+    font-size: 21px;
+    text-align: center;
+
+}
+
+.lineup li {
+    margin-bottom: 24px;
+    list-style: none;
+    text-align: center;
+}
+
+.scroll-to {
+    position: absolute;
+    left: 50%;
+    bottom: 3vh;
+    width: 64px;
+    height: 32px;
+    background-image: url(images/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
+
+.scroll-to-intro {
+    background-image: url(images/down-arrow-light.svg);
+    position: absolute;
+    left: 50%;
+    bottom: 3vh;
+    width: 64px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@media (max-width: 640px) {
+    .marquee {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 90vw;
+        margin-bottom: 24px;
+    }
+
+    .logo {
+        max-width: 64px;
+        margin-bottom: 24px;
+    }
+
+    .intro p {
+        font-size: 20px;
+    }
+
+    .scroll-to {
+        display: none;
+    }
+
+    .date {
+        font-size: 24px;
+    }
+
+    .lineup h2 {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "fifty-festival",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fifty.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "in-view": "^0.6.1"
+  }
+}
